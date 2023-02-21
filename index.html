@@ -15,8 +15,8 @@
                 <img src="images/mpesa.jpg" alt="">
             </div>
         </div>
-        
-        <div class="payement-details">
+        <hr class="seperate">
+        <div class="paymentDetails">
             <h4>Please complete the purchase by providing payment details</h4>
             <div class="button-box">
                 <div id="button"></div>
@@ -25,17 +25,37 @@
             </div>
             <form action="" class="form">
                 <div class="email">
-                    <h3>Email Address</h3>
-                    <input type="text" class="clientEmail" autofocus>
+                    <h3>Your Email Address *</h3>
+                    <input type="text" class="clientEmail" required>
                 </div>
-                <h3>Mpesa Phone Number</h3>
-                <input type="number" name="" class="mpesaNumber">
-                <h3 class="businessNumber">Business Number</h3>
-                <input type="number" name="" id="" class="businessNumber">
-                <h3>Till Number</h3>
-                <input type="number" name="" class="tillNumber">
+                <div>
+                    <h3>Mpesa Phone Number *</h3>
+                    <input type="number" name="" class="mpesaNumber" required>
+                </div>
+                <div class="businessNumber">
+                    <h3 >Business Number</h3>
+                    <input type="number" placeholder="111122" readonly>
+                </div>
+                <div class="accountNumber">
+                    <h3>Account Number</h3>
+                    <input type="number" placeholder="11111111" readonly>
+                </div>
+                <div class="tillNumber">
+                    <h3>Till Number</h3>
+                    <input type="number" class="tillNumber" placeholder="111122" readonly>
+                </div>
+                <div class="total">
+                    <h3>Subtotal: 42,000</h3>
+                    <h3>Delivery fee: 400</h3>
+                </div>
             </form>
-            <button type="submit" class="pay">Pay</button>
+            <button type="submit" id="payButton" onclick="openPopup()">Pay 42,400</button>
+        </div>
+        <div class="popUp" id="popUp">
+            <img src="images/green-tick.png" alt="" >
+            <h2>Thank You!</h2>
+            <p>Your payment has been received.</p>
+            <button type="button" onclick="closePopup()">Continue shopping</button>
         </div>
     </section>
 

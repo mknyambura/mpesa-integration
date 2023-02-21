@@ -1,34 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#container, h1, h4{
-    padding: 10px;
-    margin: 10px;
+body {
+    max-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 h1{
     font-size: 36px;
+    font-weight: 500;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h3{
+    font-size: 15px;
+    font-weight: 300;
+    font-weight: 500;
+}
+h4{
+    color: #727272;
+    font-weight: 400;
 }
 img{
     width: 200px;
     float: right;
 }
-.button-box{
-    width: 300px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    position: relative;
-    border-radius: 30px;
-    background: #128a03;
-    position: relative;
-    display: flex;
+input {
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    width: 60%;
+    line-height: 2em;
+    border: 1px solid #727272;
+    border-radius: 5px;
 }
 #button{
     display: flex;
@@ -44,6 +47,116 @@ img{
     align-items: center;
     justify-content: center;
 }
+#container {
+    /* width: 800px; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+}
+#container, h1, h4{
+    padding: 10px;
+    margin: 10px;
+}
+.button-box{
+    width: 300px;
+    margin: 20px 0 20px 10px;
+    position: relative;
+    border-radius: 30px;
+    background: #128a03;
+    position: relative;
+    display: flex;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px 0 10px;
+}
+.form{
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#payButton{
+    background: #128a03;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin-left: 20px;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+#payButton:hover{
+    background-color: #66bb5b;
+    transition: 0.6s all;
+}
+.paymentDetails{
+    display: flex;
+    flex-direction: column;
+}
+.popUp{
+    width: 600px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    flex-direction: column;
+    display: flex;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    /* border: 1px solid #727272; */
+}
+.active{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popUp img {
+    width: 100px;
+    margin-top: -50px;
+    margin-left: 45%;
+    border-radius: 50%;
+    /* box-shadow: 0 2px rgba(0,0,0,0.2); */
+}
+.popUp h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popUp button{
+    background-color: #128a03;
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.seperate {
+    width: 2px;
+    height: 500px;
+    background: #727272;
+}
 .toggle-button{
     padding: 8px 45px;
     cursor: pointer;
@@ -53,36 +166,53 @@ img{
     position: relative;
     text-align: center;
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
-.form{
-    margin: 10px;
-    padding: 10px;
+.total {
+    display: flex;
+    flex-direction: column;
+    /* float: right; */
 }
-h4{
-    color: #727272;
+.total h3{
+    margin: 5px 0 5px 0;
 }
-.pay{
-    background: #128a03;
-    border-radius: 20px;
-    padding: 10px 30px;
-    border: 0;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+
+@media screen and (max-width: 900px){
+    .header{
+        flex-direction: column;
+    }
+    .toggle-button{
+        padding: 5px 30px;
+    }
 }
-.businessNumber{
-    visibility: hidden;
-}
-input {
-    margin: 10px;
-    padding: 5px;
-    width: 70%;
-    line-height: 2em;
-    border: 1px solid #727272;
-    border-radius: 5px;
-}
+ @media screen and (min-width: 400px) {
+    h1 {
+        font-size: 22px;
+    }
+    img{
+        width: 108px;
+    }
+    .header{
+        margin: 0px 5px 0 5px;
+    }
+    .seperate{
+        height: 400px;
+    }
+    input{
+        line-height: 1em;
+    }
+    .pay{
+        font-size: 12px;
+        padding: 5px 15px;
+        width: 40%;
+    }
+    .toogle-button{
+        font-size: 12px;
+    }
+    .button-box{
+        margin: 10px 0 10px 5px;
+    }
+ }
